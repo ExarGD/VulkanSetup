@@ -2,4 +2,5 @@
 !.gitignore
 !CppVulkanTutorial/main.cpp
 !CppVulkanTutorial/makefile
-!CppVulkanTutorial.xcodeproj/*
+!CppVulkanTutorial.xcodeproj
+!CppVulkanTutorial/makefile_old

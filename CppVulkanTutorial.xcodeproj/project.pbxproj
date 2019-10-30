@@ -33,6 +33,7 @@
 		6E0C084123267F61009655E8 /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = ../../../../../../../usr/local/lib/libglfw.3.4.dylib; sourceTree = "<group>"; };
 		6E3F477023269BD70005916D /* libvulkan.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libvulkan.1.dylib; path = ../../../../../../../usr/local/lib/libvulkan.1.dylib; sourceTree = "<group>"; };
 		6E3F477123269BD70005916D /* libvulkan.1.1.114.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libvulkan.1.1.114.dylib; path = ../../../../../../../usr/local/lib/libvulkan.1.1.114.dylib; sourceTree = "<group>"; };
+		6E6605CA235F4F2400A961C8 /* shaders */ = {isa = PBXFileReference; lastKnownFileType = folder; path = shaders; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +70,7 @@
 		6E0C083823267C5E009655E8 /* CppVulkanTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				6E6605CA235F4F2400A961C8 /* shaders */,
 				6E0C083923267C5E009655E8 /* main.cpp */,
 			);
 			path = CppVulkanTutorial;
@@ -261,22 +263,30 @@
 		6E0C083E23267C5E009655E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = C9373UA9RR;
+				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 			};
 			name = Debug;
 		};
 		6E0C083F23267C5E009655E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = C9373UA9RR;
+				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 			};
 			name = Release;
 		};
