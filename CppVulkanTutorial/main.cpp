@@ -1,5 +1,3 @@
-// https://github.com/Overv/VulkanTutorial/blob/master/en/03_Drawing_a_triangle/00_Setup/02_Validation_layers.md
-
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
 
@@ -31,6 +29,8 @@ const bool enableValidationLayers = false;
 const bool enableValidationLayers = true;
 #endif
 
+
+// Error message handling
 VkResult
 CreateDebugUtilsMessengerEXT(
   VkInstance instance,
@@ -122,7 +122,6 @@ private:
   {
     glfwInit();
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
-    //    glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
     window = glfwCreateWindow(WIDTH, HEIGHT, "Vulkan", nullptr, nullptr);
   }
@@ -184,6 +183,7 @@ private:
         "Validation layer was requested, but not available!");
     }
 
+    // Basic configuration struct
     VkApplicationInfo appInfo = {};
     appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
     appInfo.pApplicationName = "Hello Triangle!";
@@ -196,6 +196,7 @@ private:
     createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
     createInfo.pApplicationInfo = &appInfo;
 
+    // List of required extensions of graphical device
     auto deviceExtensions = getRequiredExtensions();
     createInfo.enabledExtensionCount =
       static_cast<uint32_t>(deviceExtensions.size());
@@ -227,7 +228,6 @@ private:
       createInfo.pNext = nullptr;
     }
 
-    // VkResult result = vkCreateInstance(&createInfo, nullptr, &instance);
     if (vkCreateInstance(&createInfo, nullptr, &instance) != VK_SUCCESS) {
       throw std::runtime_error("Failed to create instance!");
     }
@@ -268,8 +268,6 @@ private:
     uint32_t match = 0;
     for (const auto& extension : VkExtensions) {
       for (int i = 0; i < glfwExCount; i++) {
-        // std::cout << extension.extensionName << " " << glfwEx[i] <<
-        // std::endl;
         if (strcmp(extension.extensionName, glfwEx[i]) == 0) {
           match++;
         }
