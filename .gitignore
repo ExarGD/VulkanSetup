@@ -5,4 +5,5 @@
 !CppVulkanTutorial/makefile
 !CppVulkanTutorial/makefile_old
 !CppVulkanTutorial/shaders/
+!CppVulkanTutorial/shaders/*
 !CppVulkanTutorial.xcodeproj
