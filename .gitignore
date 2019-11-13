@@ -1,6 +1,8 @@
 *
 !.gitignore
+!CppVulkanTutorial/
 !CppVulkanTutorial/main.cpp
 !CppVulkanTutorial/makefile
-!CppVulkanTutorial.xcodeproj
 !CppVulkanTutorial/makefile_old
+!CppVulkanTutorial/shaders/
+!CppVulkanTutorial.xcodeproj
